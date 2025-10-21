@@ -9,8 +9,18 @@ import { Component } from "@angular/core";
 )
 
 export class Producto {
+
+   public nombre: string;
+   public marca: string;
+   public precio: number;
+   public descripcion: string;
+
    constructor(){
+      this.nombre = "PC PORTATIL 1"
+      this.marca = "ASUS 1"
+      this.precio = 457
+      this.descripcion = "Este computador es muy potente 1"
       console.log('SE HA CARGADO EL COMPONENTE DEL PRODUCTO')
-      alert('Hola')
+
    }
 }

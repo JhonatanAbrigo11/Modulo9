@@ -7,8 +7,17 @@ import { Component } from '@angular/core';
 })
 
 export class Perfil{
+    public nombre: string;
+    public edad: number;
+    public ocupacion: string;
+    public direccion: string;
+    public telefono: string;
     constructor(){
-        alert("¡Bienvenido al perfil, estás dentro de la aplicación!")
+        this.nombre="Jhonatan Abrigo",
+        this.edad = 18;
+        this.ocupacion= "Desarrollador de Software"
+        this.direccion = "Cuenca-Ecuador"
+        this.telefono= "09999999999"
         console.log("Se cargó el componente de perfil correctamente.")
         
     }
