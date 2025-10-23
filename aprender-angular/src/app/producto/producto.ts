@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component,OnInit } from "@angular/core";
 import { Pelicula } from "../pelicula/pelicula";
 import { Usuario } from "../usuario/usuario";
 import { Ventas } from "../ventas/ventas";
@@ -26,5 +26,17 @@ export class Producto {
       this.descripcion = "Este computador es muy potente 1"
       console.log('SE HA CARGADO EL COMPONENTE DEL PRODUCTO')
 
+   }
+
+   ngOnInit(){
+      console.log("El componente esta inicializado")
+   }
+
+   ngDoCheck(){
+      console.log('Componente actualizado')
+   }
+
+   cambiarNombre(){
+      this.nombre= "Laptop ASUS"
    }
 }
