@@ -25,5 +25,16 @@ export class Perfil{
         console.log("Se cargó el componente de perfil correctamente.")
         
     }
+
+    ngDoCheck(){
+        console.log('Compoenete Actualizado')
+    }
+
+    cambiarEdad(){
+        this.edad= 43
+    }
+    cambiarDireccion(){
+        this.direccion= 'Nueva dirección'
+    }
 }
 

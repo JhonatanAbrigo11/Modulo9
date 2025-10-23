@@ -1,7 +1,16 @@
 p{
-    background-color: aqua;
+    background-color: rgb(43, 255, 0);
 }
 
 strong{
     background-color: brown;
+}
+
+button{
+    background-color: aqua;
+}
+
+.contenedorBoton{
+    display: flex;
+    gap: 20px;
 }
