@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { Cuenta } from "../cuenta/cuenta";
+import { Prestamos } from "../prestamos/prestamos";
+import { Transacciones } from "../transacciones/transacciones";
 
 @Component({
     selector:"mi-perfil",
     templateUrl:"./mi-perfil.html",
-    styleUrl: "./mi-perfil.css"
+    styleUrl: "./mi-perfil.css",
+    imports: [Cuenta, Prestamos, Transacciones]
 })
 
 export class Perfil{
