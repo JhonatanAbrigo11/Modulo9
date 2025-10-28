@@ -11,7 +11,15 @@
     <button (click)="cambiarDireccion()">CAMBIAR DIRECCIÓN</button>
 </div>
 
+<br>
+<br>
+@if(mostrar_cuenta == true){
+    <button (click)="ocultarCuenta(false)">Ocultar Cuenta</button>
+}@else {
+    <button (click)="ocultarCuenta(true)">Mostrar Cuenta</button>
+}
 
-<app-cuenta></app-cuenta>
-<app-prestamos></app-prestamos>
-<app-transacciones></app-transacciones>
+@if(mostrar_cuenta== true){
+    <app-cuenta></app-cuenta>
+}
+
