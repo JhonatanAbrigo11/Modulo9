@@ -1,1 +1,11 @@
-<p>prestamos works!</p>
+
+<a [href]="web"
+[class.activo]="redirigir"
+> Escuha música aqui!!</a>
+
+@if(redirigir == true){
+    <p>El enlace funciona correctamente</p>
+    
+}@else {
+    <p>Lo sentimos, el enlace no esta disponible</p>
+}

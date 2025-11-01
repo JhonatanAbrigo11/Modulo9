@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './prestamos.css'
 })
 export class Prestamos {
-
+  web = "https://open.spotify.com"
+  redirigir = false;
 }
