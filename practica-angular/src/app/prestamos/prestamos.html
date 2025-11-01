@@ -9,3 +9,19 @@
 }@else {
     <p>Lo sentimos, el enlace no esta disponible</p>
 }
+
+<h3>LISTADO DE PRESTAMOS</h3>
+
+<ul>
+    @for(prestamo of prestamosList; track prestamo.id){
+        <li>
+            ${{prestamo.monto}} - 
+            <span [ngClass]="{
+              'aprobado': prestamo.estado === 'Aprobado',
+              'pendiente': prestamo.estado === 'Pendiente'
+            }">
+                {{prestamo.estado}}
+            </span>
+        </li>
+    }
+</ul>

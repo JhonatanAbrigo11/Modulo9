@@ -14,3 +14,12 @@ a{
     
 }
 
+.aprobado {
+  color: green;
+  font-weight: bold;
+}
+
+.pendiente {
+  color: red;
+  font-weight: bold;
+}
