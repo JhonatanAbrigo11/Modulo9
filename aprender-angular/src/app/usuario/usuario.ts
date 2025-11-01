@@ -9,7 +9,17 @@ import { Component } from '@angular/core';
 export class Usuario {
   web = "https://amazon.com";
   redirigir= true;
-
+  marcasAutos = [
+    {id:1, nombre:"Toyota"},
+    {id:2, nombre:"Kia"},
+    {id:3, nombre:"Chevrolet"},
+    {id:4, nombre:"Nissan"},
+    {id:5, nombre:"Mazda"},
+  ];
+  ngOnInit(){
+    this.marcasAutos = []
+  }
+  
 cambioRedireccion (){
   if(this.redirigir == false){
     this.redirigir = true
