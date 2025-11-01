@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { Transacciones } from "../transacciones/transacciones";
 
 
 @Component({
   selector: 'app-prestamos',
-  imports: [NgClass],
+  imports: [NgClass, Transacciones],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css'
 })
@@ -19,5 +20,11 @@ export class Prestamos {
     {id:4, monto:1222,estado:"Pendiente"},
     {id:5, monto:1422,estado:"Aprobado"},
     {id:6, monto:3422,estado:"Pendiente"}
-  ]
+  ];
+
+  prestamo={
+    id: 1,
+    tipo:"otro",
+    interes: 10,
+  } 
 }

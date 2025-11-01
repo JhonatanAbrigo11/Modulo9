@@ -25,3 +25,22 @@
         </li>
     }
 </ul>
+
+@switch (prestamo.tipo) {
+    @case ("hipotecario") {
+        <app-transacciones></app-transacciones>
+    }
+
+    @case ("personal") {
+        <p>El prestamo es de tipo personal</p>
+    }
+
+    @case ("vehicular") {
+        <p>Para la compra de un vehículo</p>
+    }
+
+    @default  {
+        <p>Tipo de prestamo no reconocido</p>
+    }
+
+}
