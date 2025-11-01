@@ -1,1 +1,18 @@
-<p>usuario works!</p>
+<h1>Plantillas en Angular</h1>
+
+<p>{{web}} </p>
+
+
+<a [href]="web" 
+[class.existe] = "redirigir"
+target="_blank">Ir a mi web</a>
+
+<h2>Estucturas de Flujo </h2>
+
+@if(redirigir == true){
+    <p>El Enlace a {{web}} es correcto ! !</p>
+} @else {
+    <p> El enlace no va a Funcionar</p>
+}
+
+<button (click)="cambioRedireccion()">Modificar Enlace</button>
