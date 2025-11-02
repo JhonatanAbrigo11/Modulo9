@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.resaltar{
+    background-color: aqua;
+    padding: 10px;
+}
+
+.destacar{
+    background-color: red;
+    padding: 5px;
+}

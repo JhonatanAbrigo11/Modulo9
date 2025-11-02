@@ -1,3 +1,4 @@
+import { Transacciones } from './transacciones/transacciones';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Perfil } from "./perfil/mi-perfil";
@@ -5,7 +6,7 @@ import { Prestamos } from "./prestamos/prestamos";
 
 @Component({
   selector: 'app-root',
-  imports: [Prestamos],
+  imports: [Prestamos, Transacciones],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
