@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
+import { UpperCasePipe, LowerCasePipe,TitleCasePipe,DatePipe } from '@angular/common';
 import { NgClass } from '@angular/common';
 import { Transacciones } from "../transacciones/transacciones";
 
 
 @Component({
   selector: 'app-prestamos',
-  imports: [NgClass, Transacciones],
+  imports: [NgClass, Transacciones,UpperCasePipe,LowerCasePipe,TitleCasePipe,DatePipe],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css'
 })
 export class Prestamos {
+  fechaActual=new Date()
   web = "https://open.spotify.com"
   redirigir = false;
 
@@ -27,4 +29,5 @@ export class Prestamos {
     tipo:"otro",
     interes: 10,
   } 
+
 }

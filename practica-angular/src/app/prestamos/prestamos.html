@@ -25,7 +25,7 @@
         </li>
     }
 </ul>
-
+<h3>DETALLE PRESTAMOS</h3>
 @switch (prestamo.tipo) {
     @case ("hipotecario") {
         <app-transacciones></app-transacciones>
@@ -44,3 +44,15 @@
     }
 
 }
+<h3>PIPES</h3>
+<h4>UPPERCASE</h4>
+{{web | uppercase}}
+<br>
+<h4>LOWERCASE</h4>
+{{web | lowercase}}
+
+<h4>TITLECASE</h4>
+{{web | titlecase}}
+
+<h4>DATECASE</h4>
+<p>{{fechaActual | date}} </p>
