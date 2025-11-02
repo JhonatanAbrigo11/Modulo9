@@ -1,3 +1,4 @@
+import { cambiaAsciiPipe } from './../pipes/cambiarAssci';
 import { Component } from '@angular/core';
 import { UpperCasePipe, LowerCasePipe,TitleCasePipe,DatePipe } from '@angular/common';
 import { NgClass } from '@angular/common';
@@ -6,7 +7,7 @@ import { Transacciones } from "../transacciones/transacciones";
 
 @Component({
   selector: 'app-prestamos',
-  imports: [NgClass, Transacciones,UpperCasePipe,LowerCasePipe,TitleCasePipe,DatePipe],
+  imports: [cambiaAsciiPipe,NgClass, Transacciones,UpperCasePipe,LowerCasePipe,TitleCasePipe,DatePipe],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css'
 })
