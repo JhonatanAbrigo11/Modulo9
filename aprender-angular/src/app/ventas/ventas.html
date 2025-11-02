@@ -3,3 +3,9 @@
 <h2 
     [ngClass]="mostrar == 'si' ? 'resaltar' : 'destacarMenos'"
 >Soy un programador</h2>
+
+<h2 
+    [ngStyle]="mostrar == 'si' ? {'background-color': 'green'} : {'background-color': 'red'}"
+>Soy estudiante</h2>
+
+<p [ngStyle]="misEstilos">Parrafo de prueba</p>
