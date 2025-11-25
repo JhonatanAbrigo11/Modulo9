@@ -1,0 +1,20 @@
+<!--<h2>DIRECTIVA NG CLASS</h2>
+
+<h2 
+    [ngClass]="mostrar == 'si' ? 'resaltar' : 'destacarMenos'"
+>Prueba con estilo</h2>
+
+<p [ngStyle]="misEstilos">Prueba de NgStyle</p>-->
+
+<ol>
+    @for (transaccion of transaccionesList; track transaccion.id) {
+        <li
+        [ngStyle]="{
+            'color':transaccion.tipo ==='ingreso' ? 'green' : 'red'
+        }"
+        >{{transaccion.fecha | date}} 
+        - {{transaccion.descripcion}}
+        - {{transaccion.monto}} </li>
+        
+    }
+</ol>

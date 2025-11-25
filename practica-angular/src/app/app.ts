@@ -1,12 +1,14 @@
-import { Transacciones } from './transacciones/transacciones';
+import { Transacciones } from './components/transacciones/transacciones';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Perfil } from "./perfil/mi-perfil";
-import { Prestamos } from "./prestamos/prestamos";
+import { Perfil } from "./components/perfil/mi-perfil";
+import { Prestamos } from './components/prestamos/prestamos';
+import { Cuenta } from "./components/cuenta/cuenta";
+
 
 @Component({
   selector: 'app-root',
-  imports: [Prestamos, Transacciones],
+  imports: [Prestamos, Transacciones, Cuenta],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

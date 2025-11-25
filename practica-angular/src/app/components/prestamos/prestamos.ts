@@ -1,4 +1,4 @@
-import { cambiaAsciiPipe } from './../pipes/cambiarAssci';
+import { cambiaAsciiPipe } from '../../pipes/cambiarAssci';
 import { Component } from '@angular/core';
 import { UpperCasePipe, LowerCasePipe,TitleCasePipe,DatePipe } from '@angular/common';
 import { NgClass } from '@angular/common';
