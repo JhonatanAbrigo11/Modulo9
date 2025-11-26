@@ -1,6 +1,6 @@
 import { Transacciones } from './components/transacciones/transacciones';
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
 import { Perfil } from "./components/perfil/mi-perfil";
 import { Prestamos } from './components/prestamos/prestamos';
 import { Cuenta } from "./components/cuenta/cuenta";
@@ -8,7 +8,7 @@ import { Cuenta } from "./components/cuenta/cuenta";
 
 @Component({
   selector: 'app-root',
-  imports: [Prestamos, Transacciones, Cuenta, Perfil],
+  imports: [Prestamos, Transacciones, Cuenta, Perfil, RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

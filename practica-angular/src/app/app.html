@@ -3,12 +3,23 @@
 <p>Felicidades! Tu app esta funcionando. 🎉</p>
 <p>Si puedes imaginarlo puedes programarlo</p>
 
-<h1>MI PERFIL</h1>
+
 <!--
 <app-prestamos></app-prestamos>
 -->
 <!--<app-transacciones></app-transacciones>-->
-<mi-perfil></mi-perfil>
+<!--<mi-perfil></mi-perfil>
 <app-cuenta></app-cuenta>
 <app-prestamos></app-prestamos>
-<app-transacciones></app-transacciones>
+<app-transacciones></app-transacciones>-->
+
+<hr>
+    <a routerLink="/inicio" routerLinkActive="activo">Inicio</a>&nbsp;
+    <a routerLink="/cuenta" routerLinkActive="activo">Cuenta</a>&nbsp;
+    <a routerLink="/transacciones" routerLinkActive="activo"> Transaccion</a>&nbsp;
+    <a routerLink="/prestamos" routerLinkActive="activo">Prestamos</a>&nbsp;
+<hr>
+
+<router-outlet>
+
+</router-outlet>
