@@ -1,3 +1,5 @@
+import { BindingPipeType } from "@angular/compiler"
+
 export class Transaccion{
     constructor(
         public id:number,
