@@ -1,10 +1,12 @@
+import { NgStyle } from '@angular/common';
 import { Pelicula } from './../../models/pelicula';
 import { Component } from '@angular/core';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-cine',
-  imports: [FormsModule],
+  imports: [FormsModule, NgStyle ],
   templateUrl: './cine.html',
   styleUrl: './cine.css'
 })
@@ -14,6 +16,7 @@ export class Cine {
   public peliculas: Array<Pelicula>
 
   public peliculasSinDatos: string [] =[];
+  public color:string = "#ffff"
 
   //Para trabajar con formularios y binding bidireccional
   public mi_pelicula: string = "";
@@ -99,9 +102,9 @@ export class Cine {
     console.log(this.peliculas)
     this.peliculas[1].titulo = "SHREK 3"
   }
-  ngDoCheck(){
+  /*ngDoCheck(){
     console.log(this.mi_pelicula);
-  }
+  }*/
   showPelicula(){
     alert(this.mi_pelicula)
   }
@@ -114,5 +117,21 @@ export class Cine {
     this.peliculas.push(
       nuevaPelicula
     );
+  }
+
+  deletePelicula(indice:number){
+    this.peliculas.splice(indice,1)
+  }
+
+  haciendoFoco(){
+    console.warn('Estas DENTRO del input de película !!')
+  }
+
+  saliendoDelFoco(){
+    console.warn('Estas FUERA del input de película !!')
+  }
+
+  pulsandoTeclas(event: KeyboardEvent){
+    console.info("Estas pulsando una tecla: "+event.key);
   }
 }
