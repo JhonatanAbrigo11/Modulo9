@@ -1,3 +1,4 @@
+import { Padre } from './components/padre/padre';
 import { Usuario } from './components/usuario/usuario';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
@@ -8,7 +9,7 @@ import { Cine } from './components/cine/cine';
 
 @Component({
   selector: 'app-root',
-  imports: [Cine],
+  imports: [Cine,Padre],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
