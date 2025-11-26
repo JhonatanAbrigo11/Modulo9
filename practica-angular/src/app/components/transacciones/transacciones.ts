@@ -1,5 +1,5 @@
 import { DatePipe, NgClass, NgStyle } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Transaccion } from '../../models/Transaccion';
 import { FormsModule } from '@angular/forms';
 @Component({
@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './transacciones.css'
 })
 export class Transacciones {
+  @Output() mensajeEnviado = new EventEmitter();
   public transaccionesList : Array<Transaccion>;
   public transaccion_1: string = "";
   constructor(){
@@ -31,5 +32,8 @@ export class Transacciones {
 
   ngDoCheck(){
     console.log(this.transaccion_1)
+  }
+  enviarSaludo(){
+    this.mensajeEnviado.emit("Hola como estas desde transacciones !!!")
   }
 }

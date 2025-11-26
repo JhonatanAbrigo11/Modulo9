@@ -8,7 +8,7 @@ import { Cuenta } from "./components/cuenta/cuenta";
 
 @Component({
   selector: 'app-root',
-  imports: [Prestamos, Transacciones, Cuenta],
+  imports: [Prestamos, Transacciones, Cuenta, Perfil],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

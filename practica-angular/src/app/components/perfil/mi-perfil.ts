@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { Cuenta } from "../cuenta/cuenta";
+import { Transacciones } from "../transacciones/transacciones";
 
 
 @Component({
     selector:"mi-perfil",
     templateUrl:"./mi-perfil.html",
     styleUrl: "./mi-perfil.css",
-    imports: [Cuenta]
+    imports: [Cuenta, Transacciones]
 })
 
 export class Perfil{
+    nombreCLiente: string = 'Juan Perez'
+    mensajeRecibido:string='';
     public nombre: string;
     public edad: number;
     public ocupacion: string;
@@ -44,6 +47,9 @@ export class Perfil{
 
     ocultarCuenta(valor:boolean){
         this.mostrar_cuenta=valor;
+    }
+    recibirMensaje(mensaje:string){
+       this.mensajeRecibido = mensaje
     }
 }
 

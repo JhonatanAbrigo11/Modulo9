@@ -23,3 +23,6 @@
     <app-cuenta></app-cuenta>
 }
 
+<app-cuenta [nombreCliente]="nombreCLiente"> </app-cuenta>
+<app-transacciones (mensajeEnviado)="recibirMensaje($event)"></app-transacciones>
+{{mensajeRecibido}}
