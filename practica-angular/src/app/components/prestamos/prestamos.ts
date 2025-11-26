@@ -1,13 +1,15 @@
+import { FormsModule } from '@angular/forms';
 import { cambiaAsciiPipe } from '../../pipes/cambiarAssci';
 import { Component } from '@angular/core';
 import { UpperCasePipe, LowerCasePipe,TitleCasePipe,DatePipe } from '@angular/common';
 import { NgClass } from '@angular/common';
 import { Transacciones } from "../transacciones/transacciones";
+import { identifierName } from '@angular/compiler';
 
 
 @Component({
   selector: 'app-prestamos',
-  imports: [cambiaAsciiPipe,NgClass, Transacciones,UpperCasePipe,LowerCasePipe,TitleCasePipe,DatePipe],
+  imports: [cambiaAsciiPipe,NgClass, Transacciones,UpperCasePipe,LowerCasePipe,TitleCasePipe,DatePipe,FormsModule],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css'
 })
@@ -15,6 +17,8 @@ export class Prestamos {
   fechaActual=new Date()
   web = "https://open.spotify.com"
   redirigir = false;
+  public  monto:number=0;
+  public estado:string=""
 
   prestamosList=[
     {id:1, monto:232,estado:"Aprobado"},
@@ -30,5 +34,19 @@ export class Prestamos {
     tipo:"otro",
     interes: 10,
   } 
+
+  deletePrestamo(indice:number){
+    this.prestamosList.splice(indice,1)
+  }
+
+  addPrestamo(){
+    let identificador = this.prestamosList[this.prestamosList.length - 1].id + 1
+    let nuevoPrestamo = {
+        id: identificador,
+        monto: this.monto,
+        estado: this.estado  
+    };
+    this.prestamosList.push(nuevoPrestamo)
+  }
 
 }

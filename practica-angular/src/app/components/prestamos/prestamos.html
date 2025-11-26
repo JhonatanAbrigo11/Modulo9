@@ -1,5 +1,5 @@
 
-<a [href]="web"
+<!--<a [href]="web"
 [class.activo]="redirigir"
 > Escuha música aqui!!</a>
 
@@ -10,10 +10,10 @@
     <p>Lo sentimos, el enlace no esta disponible</p>
 }
 
-<h3>LISTADO DE PRESTAMOS</h3>
+<h3>LISTADO DE PRESTAMOS</h3>-->
 
 <ul>
-    @for(prestamo of prestamosList; track prestamo.id){
+    @for(prestamo of prestamosList; track prestamo.id; let indice= $index){
         <li>
             ${{prestamo.monto}} - 
             <span [ngClass]="{
@@ -22,10 +22,24 @@
             }">
                 {{prestamo.estado}}
             </span>
+            <button (click)="deletePrestamo(indice)">Eliminar</button>
+            
         </li>
     }
 </ul>
-<h3>DETALLE PRESTAMOS</h3>
+
+<hr>
+<p>
+    Monto:
+    <input type="text" [(ngModel)] = "monto" />
+    Estado de Prestamo:
+    <input type="text" [(ngModel)] = "estado" />
+    <button (click)="addPrestamo()">Añadir Prestamo</button>
+</p>
+
+
+
+<!--<h3>DETALLE PRESTAMOS</h3>
 @switch (prestamo.tipo) {
     @case ("hipotecario") {
         <app-transacciones></app-transacciones>
@@ -57,4 +71,4 @@
 <h4>DATECASE</h4>
 <p>{{fechaActual | date}} </p>
 <h4>CODIGO ASCII</h4>
-{{"Hola soy Jhonatan" |cambiaAscii}}
+{{"Hola soy Jhonatan" |cambiaAscii}}-->
