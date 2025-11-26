@@ -4,7 +4,9 @@ import { Pelicula } from "../pelicula/pelicula";
 
 @Component(
    {
+    
     selector: "mi-producto",
+    standalone:true,
     imports : [Pelicula],
     templateUrl: "./producto.html",
     styleUrl:"./producto.css"

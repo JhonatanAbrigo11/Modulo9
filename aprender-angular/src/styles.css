@@ -12,3 +12,8 @@
     padding: 6px;
     font-family:'Courier New', Courier, monospace;
 }
+
+.activarLink{
+    background-color: aquamarine;
+    color: black;
+}
