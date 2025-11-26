@@ -14,7 +14,13 @@
         }"
         >{{transaccion.fecha | date}} 
         - {{transaccion.descripcion}}
-        - {{transaccion.monto}} </li>
+        - {{transaccion.monto}} 
+        - {{transaccion.tipo}} </li>
         
     }
 </ol>
+<input type="text" [(ngModel)] = "transaccion_1" />
+<p>
+    Mi transacción es: 
+    <strong>{{transaccion_1}} </strong>
+</p>
